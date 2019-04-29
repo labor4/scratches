@@ -9,6 +9,8 @@ mydef=$(/sbin/route -n get default | grep 'gateway' | awk '{print $2}')
 
 if [[ "$mydef" != "$MYGAMEROUTERIP" ]];then
     echo "$mydef" > /tmp/lastoriggw
-    /bin/bash -c "sleep 5; /sbin/route change default '$mydef' -hopcount 4" &
-    /bin/bash -c "sleep 5; /sbin/route change default $MYGAMEROUTERIP -hopcount 1" &
+    /bin/bash -c "sleep 5; /sbin/route add $trusted_ip/32 '$mydef'" &
+    /bin/bash -c "sleep 5; /sbin/route add 0/1 $MYGAMEROUTERIP" &
 fi
+
+
