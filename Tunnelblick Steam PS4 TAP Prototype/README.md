@@ -1,7 +1,9 @@
-# Tunnelblick Basic Example
+## Tunnelblick/OpenVPN Basic Example [client side]
 # Steam and PS4 with same config
 
 Tested on Macos 10.13 with Tunnelblick
+
+This provides a scripted extension to be able to use the same TAP connection with both Steam and PS4 Remote Play.
 
 These post connect/disconnect hooks change the priority of the TAP route in that the TAP net will be priorized over the normal hw net without damaging the base connection. It will later restore the former default gateway.
 Steam relies on broadcasts, while PS4 seems to rely on "same gw as PS4" to effectively make a fresh hook. Tested by changing users to connect to PS4.
