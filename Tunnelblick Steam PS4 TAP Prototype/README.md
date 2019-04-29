@@ -1,4 +1,4 @@
-## Tunnelblick/OpenVPN Basic Example
+## Tunnelblick/OpenVPN Basic Example [client side]
 # Steam and PS4 with same config
 
 Tested on Macos 10.13 with Tunnelblick
